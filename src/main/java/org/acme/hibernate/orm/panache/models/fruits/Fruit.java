@@ -1,4 +1,4 @@
-package org.acme.hibernate.orm.panache;
+package org.acme.hibernate.orm.panache.models.fruits;
 
 import jakarta.persistence.Cacheable;
 import jakarta.persistence.Column;

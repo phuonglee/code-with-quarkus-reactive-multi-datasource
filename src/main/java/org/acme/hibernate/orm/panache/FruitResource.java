@@ -7,6 +7,7 @@ import jakarta.enterprise.context.ApplicationScoped;
 import jakarta.ws.rs.GET;
 import jakarta.ws.rs.POST;
 import jakarta.ws.rs.Path;
+import org.acme.hibernate.orm.panache.models.fruits.Fruit;
 import org.jboss.resteasy.reactive.RestResponse;
 
 import java.util.List;
