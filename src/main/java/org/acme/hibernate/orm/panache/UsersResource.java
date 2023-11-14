@@ -3,6 +3,7 @@ package org.acme.hibernate.orm.panache;
 import io.quarkus.hibernate.reactive.panache.Panache;
 import io.quarkus.panache.common.Sort;
 import io.quarkus.reactive.datasource.ReactiveDataSource;
+import io.smallrye.mutiny.Multi;
 import io.smallrye.mutiny.Uni;
 import jakarta.enterprise.context.ApplicationScoped;
 import jakarta.inject.Inject;
@@ -30,9 +31,8 @@ public class UsersResource {
 
     @GET
     @Path("/all")
-//    @ReactiveDataSource("users")
-    public Uni<List<User>> getAll() {
-        return userRepository.listAll();
+    public Multi<User> getAll() {
+        return userRepository.findAll();
     }
 
     @GET
